@@ -3,6 +3,9 @@
 import re
 import logging
 
+
+(?P < nmap > Nmap)?\s+(?P < scan > scan)?\s+(?P < report > report)?\s+(?P < for > for)?\s+(?P < ip >\b\d{1, 3}\.\d{1, 3}\.\d{1, 3}\.\d{1, 3}\b)\s +\S +?(?P < hostdn > host down)?, ?\s+(?P < recv_noresp > received no-response)?\S+?
+
 # A nice big fat regex that parses your entire log lines
 regex = re.compile(
     r"\[(?P<wday>\w+)\s(?P<month>\w+)\s+(?P<day>\d+)\s+(?P<time>[0-9]{0,4}:[0-9]{0,4}:[0-9]{0,4})\s+(?P<tzone>\w+)\s+(?P<year>\d+)\] Ping=\"(?P<ping>[0-9]{1,5}.?[0-9]{0,5})\sms\" Download=\"(?P<download>[0-9]{0,6}.?[0-9]{0,6})\s?Mbit\/s\" Upload=\"(?P<upload>[0-9]{0,6}.?[0-9]{0,6})\s?Mbit\/s\"")
