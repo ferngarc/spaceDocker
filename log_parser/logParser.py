@@ -4,7 +4,7 @@ import re
 import logging
 
 
-(?P < nmap > Nmap)?\s+(?P < scan > scan)?\s+(?P < report > report)?\s+(?P < for > for)?\s+(?P < ip >\b\d{1, 3}\.\d{1, 3}\.\d{1, 3}\.\d{1, 3}\b)\s +\S +?(?P < hostdn > host down)?, ?\s+(?P < recv_noresp > received no-response)?\S+?
+# (?P < nmap > Nmap)?\s+(?P < scan > scan)?\s+(?P < report > report)?\s+(?P < for > for)?\s+(?P < ip >\b\d{1, 3}\.\d{1, 3}\.\d{1, 3}\.\d{1, 3}\b)\s +\S +?(?P < hostdn > host down)?, ?\s+(?P < recv_noresp > received no-response)?\S+?
 
 # A nice big fat regex that parses your entire log lines
 regex = re.compile(
